@@ -14,11 +14,6 @@ TRIPIFY is a comprehensive Travel & Tourism Management System built on Oracle 10
 
 - **Comprehensive Database:** The Oracle 10g database serves as a robust and reliable backend, storing and managing data to ensure a smooth operation of the system.
 
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - The TRIPIFY team for their dedication and hard work.
