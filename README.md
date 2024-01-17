@@ -20,3 +20,11 @@ TRIPIFY is a comprehensive Travel & Tourism Management System built on Oracle 10
 - Oracle for providing a robust database solution.
 
 Feel free to explore and contribute to TRIPIFY. Happy traveling!
+
+## Contributors
+| Name                          | ID            |
+| ----------------------------- | ------------- |
+| Turjo Das Dip                 | 22-48558-3    |
+| Shaily Saha                   | 22-48530-3    |
+| Pretom Chandra Roy            | 22-48556-3    |
+
