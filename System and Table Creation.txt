@@ -1,0 +1,61 @@
+First Go To system admin
+
+create user tms identified by tms
+grant connect, resource to tms
+
+create table customer (cus_id number (4) primary key,fname varchar (25),
+lname varchar (20),nid number(13),mob_no varchar(11),
+email varchar(25),hno number(3),street varchar(20),city varchar(25))
+
+describe customer
+
+create table payment (pay_id varchar(5) primary key, amount number(7,2),
+co_name varchar(45), expire date,cvc number(3),c_no number(12))
+
+describe payment
+
+create table package (p_id varchar(3) primary key,p_name varchar(30),
+destination varchar(20),p_cost number(5))
+
+describe package
+
+create table transport (t_no varchar(5) primary key,t_cost number(11),
+dept_loc varchar(15),arr_loc varchar(15),
+dept_time varchar(50),arr_time varchar(50))
+
+describe transport
+
+create table hotel (h_id varchar(4) primary key,h_name varchar(30),
+h_loc varchar(20),h_contact varchar(11),h_license varchar(11),h_cost number(10))
+
+describe hotel
+
+create table makes(cus_id number(4) primary key,pay_id varchar(25),
+constraint mfk foreign key (pay_id) references payment (pay_id))
+
+describe makes
+
+create table reserves(cus_id number(4) primary key,h_id varchar(4),r_amm number(10),
+constraint rfk foreign key (h_id) references hotel (h_id))
+
+describe reserves
+
+create table review (rev_id varchar(4) primary key, rating number(5), 
+r_date date, comments varchar2(50) )
+
+describe review
+
+create table schedules(cus_id number(4) primary key,t_no varchar(5),s_amm number(10),
+constraint sfk foreign key (t_no) references transport (t_no))
+
+describe schedules
+
+create table books(cus_id number(4) primary key,p_id varchar(3),b_amm number(10),
+constraint bfk foreign key (p_id) references package (p_id))
+
+describe books
+
+create table gives (cus_id number(4) primary key, rev_id varchar(4),
+constraint gfk foreign key (rev_id) references review (rev_id) )
+
+describe gives
